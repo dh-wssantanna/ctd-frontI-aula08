@@ -4,18 +4,21 @@ O objetivo dessa metodologia é tornar o código fonte HTML o mais semântico, a
 
 ## Dimensões
 ### Largura / Altura
-#### width
-#### height
+#### width: largura
+#### height: altura
+#### overflow: visible | hidden | scroll | auto | inherit
 
-### Borda
-#### border
+### Personalização
+#### background-color: cor
+#### border: espessura estilo cor
+#### font-family: 'Fonte 1', 'Fonte 2'...
+#### font-size: tamanho
 
 ### Espaçamento interno / externo
 #### padding
 #### margin
 
 ## Posicionamento
-### posicion: relative
-### posicion: absolut
-### posicion: fixed
-### z-index
+### text-align: center | left | right | justify
+### float: left | right
+### clear: none | left | right | both
