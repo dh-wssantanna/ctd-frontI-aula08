@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07 - Propriedades de estilização</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body {
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .boxe {
+
+            /* Personalização */
+            background-color: #ff0055;  /* Cor de fundo */
+            color: #fff;
+            font-size: 42px;
+            /*
+            border-width: 5px;
+            border-color: #fff;
+            border-style: solid;
+            */
+            border: 5px solid #fff; /* largura, cor e estilo */
+
+            /* Dimensões */
+            height: 100px; /* Altura */
+            width: 100px; /* Largura */
+
+            /* Espaçamento */
+            /*
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            */
+            /* margin: 10px 10px 10px 50px; */ /* topo, direita, baixo, esquerda */
+            /* margin: 50px 10px; */ /* topo e baixo - direita e esquerda */
+            /* Externo: top, em baixo, esquerda e direita */
+            /* margin: 50px 25px 10px; */ /* topo, esquerda e direita, baixo */
+            margin: 10px;
+            /* Interno:  top, em baixo, esquerda e direita */
+            padding: 10px;
+            /*
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            */
+            /* Posicionamento */
+            float: left;
+            text-align: right;
+            
+        }
+
+        .conteudo {
+            background-color: gray;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+        <div class="boxe">1</div>
+        <div class="boxe">2</div>
+        <div class="boxe">3</div>
+        <div class="boxe">4</div>
+    </div>
+</body>
+</html>
