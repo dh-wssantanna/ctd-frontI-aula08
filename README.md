@@ -45,6 +45,19 @@ O objetivo dessa metodologia é tornar o código fonte HTML o mais semântico, a
 ```
 ## Personalização
 ### background-color: cor
+``` css
+.boxe {
+  ...
+  background-color: pink;
+}
+/*
+  Nota: Por padrão o valor de borda é somado ao valor final.
+
+  Considerando a largura / altura de 100px, nosso boxe passaria ter largura / altura de 110px.
+  width: 100px; + border-width-left: 5px + border-width-right: 5px; = 110px;
+  heiht: 100px; + border-width-top: 5px + border-width-bottom: 5px; = 120px;  
+*/
+```
 ### border: espessura estilo cor
 ``` css
 .boxe {
@@ -62,6 +75,11 @@ O objetivo dessa metodologia é tornar o código fonte HTML o mais semântico, a
 ```
 **Nota:** Por padrão a propriedade `border` é somada a dimensão do boxe.
 ### font-family: 'Fonte 1', 'Fonte 2'...
+``` css
+.titulo {
+  font-family: Arial, Helvetica, sans-serif; 
+}
+```
 ### font-size: tamanho
 ``` css
 .titulo {
@@ -81,10 +99,59 @@ O objetivo dessa metodologia é tornar o código fonte HTML o mais semântico, a
   float: left; 
 }
 ```
-### clear: none | left | right | both
-``` css
-.boxe {
-  clear: left; 
-}
-```
 ### overflow: visible | hidden | scroll | auto | inherit
+``` html
+<html>
+  <head>
+    ...
+    <title>Título da página>
+    <style>
+      .conteudo {
+        overflow: auto; 
+      }
+      .boxe {
+        float: left;
+        ...
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteudo">
+        <div class="boxe">1</div>
+        <div class="boxe">2</div>
+        <div class="boxe">3</div>
+        <div class="boxe">4</div>
+    </div>
+  </body>
+</html>
+```
+
+### clear: none | left | right | both
+``` html
+<html>
+  <head>
+    ...
+    <title>Título da página>
+    <style>
+      .conteudo {
+        overflow: auto; 
+      }
+      .boxe {
+        float: left;
+        ...
+      }
+      .quebrar-linha {
+        clear: left; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteudo">
+        <div class="boxe">1</div>
+        <div class="boxe">2</div>
+        <div class="boxe quebrar-linha">3</div>
+        <div class="boxe">4</div>
+    </div>
+  </body>
+</html>
+```
