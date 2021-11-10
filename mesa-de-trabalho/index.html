@@ -5,76 +5,169 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importação das fontes do Google Fonts -->
+    <!-- Link da fonte importada: https://fonts.google.com/specimen/Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
     <style type="text/css">
         /* Coloque o código da atividade aqui... */
+
+        /* 
+            Configuração do Modelo de Caixa que ignora espaçamento interno 
+            e bordar no calculo de dimensão do elemento HTML 
+        */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Definido a fonte Montserrat como padrão do documento */
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .conteudo {
+            /* 
+                Definir um valor de largura para facilitar o calculo 
+                de dimensão das colunas colunas. 
+
+                No exemplo, para se ter três itens por linha, 
+                cada item deverá ter 400px de largura.
+            */
+            width: 1200px;
+            margin: 50px auto;
+        }
+
+        .conteudo__titulo {
+            font-size: 32px;
+            /*
+                A propriedade margin com essa sintaxe abrevia as propriedades
+                margin-top, margin-right, margin-bottom e margin-left.
+
+                No exemplo a baixo, estamos definindo:
+                margin-top: 0;
+                margin-right: 0;
+                margin-bottom: 50px;
+                margin-left: 0;
+            */
+            margin: 0 0 50px;
+            text-align: center;
+        }
+
+        .grade {
+            margin: 25px 0;
+        }
+
+        .grade__item {
+            /*
+                A propriedade min-height permite definir um valor mínimo
+                de altura para o objeto. Diferente da propriedade height, 
+                caso o conteúdo ocupe um altura superior não haverá 
+                problema em se ajustar.
+
+                Documentação: https://developer.mozilla.org/pt-BR/docs/Web/CSS/min-height
+            */
+            min-height: 300px;
+            font-size: 14px;
+            float: left;
+            padding: 25px 0;
+            text-align: center;
+            width: 400px;
+        }
+
+        .grade__corpo {
+            margin: 15px 0;
+        }
+
+        .grade__titulo {
+            margin: 0;
+        }
+
+        .grade__descricao {
+            margin: 10px 0;
+        }
+        
     </style>
     <title>Mesa de trabalho</title>
 </head>
 
 <body>
-    <article class="content">
-        <h1 class="content__title">Essa é a melhor parte:<br>Adicione ou retire coberturas do seu seguro.</h1>
+    <!-- O código HTML pode ser alterado se considerarem necessário. -->
+    <!-- 
+        Esse fragmento de código HTML utilizou a metodologia BEM (Bloco, Elemento e Modificador) 
+        para gerar os nomes das classes. 
+
+        Documentação: http://getbem.com/introduction/
+        Artigo de apoio: https://desenvolvimentoparaweb.com/css/bem/
+    -->
+    <article class="conteudo">
+        <h1 class="conteudo__titulo">Essa é a melhor parte:<br>Adicione ou retire coberturas do seu seguro.</h1>
         <div class="grade">
-            <figure class="grade__item">
-                <img src="./images/icon-1.png" alt="">
-                <figcaption>
-                    <strong>Furto / Roubo</strong><br>Sem perder a calma, você recebe<br>até 100% do valor de
-                    tabela FIBE.
-                </figcaption>
-            </figure>
-            <figure class="grade__item">
-                <img src="./images/icon-2.png" alt="">
-                <figcaption>
-                    <strong>Colisão</strong><br>Bateu, tá novo. Conserto<br>em caso de acidente.
-                </figcaption>
-            </figure>
-            <figure class="grade__item">
-                <img src="./images/icon-3.png" alt="">
-                <figcaption>
-                    <strong>Perda total</strong><br>Indenização para seu<br>alívio também ser total.
-                </figcaption>
-            </figure>
+            <div class="grade__item">
+                <img src="./imagens/icon-1.png" alt="">
+                <section class="grade__corpo">
+                    <h2 class="grade__titulo">Furto / Roubo</h2>
+                    <p class="grade__descricao">Sem perder a calma, você recebe até 100% do valor de tabela FIBE.</p>
+                </section>
+            </div>
+            <div class="grade__item">
+                <img src="./imagens/icon-2.png" alt="">
+                <section class="grade__corpo">
+                    <h2 class="grade__titulo">Colisão</h2>
+                    <p class="grade__descricao">Bateu, tá novo. Conserto em caso de acidente.</p>
+                </section>
+            </div>
+            <div class="grade__item">
+                <img src="./imagens/icon-3.png" alt="">
+                <section class="grade__corpo">
+                    <h2 class="grade__titulo">Perda total</h2>
+                    <p class="grade__descricao">Indenização para seu alívio também ser total.</p>
+                </section>
+            </div>
 
-            <figure class="grade__item">
-                <img src="./images/icon-4.png" alt="">
-                <figcaption>
-                    <strong>Incêndio</strong><br>Indenização total para ou parcial<br>para apagar o prejuízo.
-                </figcaption>
-            </figure>
-            <figure class="grade__item">
-                <img src="./images/icon-5.png" alt="">
-                <figcaption>
-                    <strong>Fenômenos naturais</strong><br>Ressarcir por danos de chuva, árvores<br>ou granizo
-                    faz parte da nossa natureza.
-                </figcaption>
-            </figure>
-            <figure class="grade__item">
-                <img src="./images/icon-6.png" alt="">
-                <figcaption>
-                    <strong>Cobertura nacional</strong><br>Do Oiapoque ao Chuí, você pode<br>contar com a gente.
-                </figcaption>
-            </figure>
+            <div class="grade__item">
+                <img src="./imagens/icon-4.png" alt="">
+                <section class="grade__corpo">
+                    <h2 class="grade__titulo">Incêndio</h2>
+                    <p class="grade__descricao">Indenização total para ou parcial para apagar o prejuízo.</p>
+                </section>
+            </div>
+            <div class="grade__item">
+                <img src="./imagens/icon-5.png" alt="">
+                <section class="grade__corpo">
+                    <h2 class="grade__titulo">Fenômenos naturais</h2>
+                    <p class="grade__descricao">Ressarcir por danos de chuva, árvores ou granizo faz parte da nossa natureza.</p>
+                </section>
+            </div>
+            <div class="grade__item">
+                <img src="./imagens/icon-6.png" alt="">
+                <section class="grade__corpo">
+                    <h2 class="grade__titulo">Cobertura nacional</h2>
+                    <p class="grade__descricao">Do Oiapoque ao Chuí, você pode contar com a gente.</p>
+                </section>
+            </div>
 
-            <figure class="grade__item">
-                <img src="./images/icon-7.png" alt="">
-                <figcaption>
-                    <strong>Carro reserva</strong><br>Em casos de imprevisto,<br>a pé você não fica.
-                </figcaption>
-            </figure>
-            <figure class="grade__item">
-                <img src="./images/icon-8.png" alt="">
-                <figcaption>
-                    <strong>Proteção para terceiros</strong><br>Se você bater em outro veículo o problema<br>é
-                    nosso. A gente conserta ele.
-                </figcaption>
-            </figure>
-            <figure class="grade__item">
-                <img src="./images/icon-2.png" alt="">
-                <figcaption>
-                    <strong>Cobertura para vidros</strong><br>Em caso de dano, o reparo vai ser<br>feito com
-                    total transparência.
-                </figcaption>
-            </figure>
+            <div class="grade__item">
+                <img src="./imagens/icon-7.png" alt="">
+                <section class="grade__corpo">
+                    <h2 class="grade__titulo">Carro reserva</h2>
+                    <p class="grade__descricao">Em casos de imprevisto, a pé você não fica.</p>
+                </section>
+            </div>
+            <div class="grade__item">
+                <img src="./imagens/icon-8.png" alt="">
+                <section class="grade__corpo">
+                    <h2 class="grade__titulo">Proteção para terceiros</h2>
+                    <p class="grade__descricao">Se você bater em outro veículo o problema é nosso. A gente conserta ele.</p>
+                </section>
+            </div>
+            <div class="grade__item">
+                <img src="./imagens/icon-2.png" alt="">
+                <section class="grade__corpo">
+                    <h2 class="grade__titulo">Cobertura para vidros</h2>
+                    <p class="grade__descricao">Em caso de dano, o reparo vai ser feito com total transparência.</p>
+                </section>
+            </div>
         </div>
     </article>
 </body>
