@@ -1,4 +1,4 @@
-# CSS: Tableless
+# CSS: Tableless 1/2
 **Tableless** é uma metodologia de desenvolvimento de páginas web que não utiliza tabelas para disposição de conteúdo na página sugerido pela W3C. 
 O objetivo dessa metodologia é tornar o código fonte HTML o mais semântico, aproveitando as propriedade de posionamento da linguagem CSS.
 
